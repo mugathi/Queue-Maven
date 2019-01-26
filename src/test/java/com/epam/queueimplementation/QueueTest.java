@@ -87,12 +87,19 @@ class QueueTest {
      * @throws QueueIsEmpty when queue is empty.
      */
     @Test
-    void queueIsFullTest throws QueueIsFull, QueueIsEmpty{
+    void queueIsFullTest() throws QueueIsFull,QueueIsEmpty{
       queue.enQueue(10);
       queue.enQueue(20);
-      Assertions.assertThrows(QueueIsFull.class, () -> queue.deQueue());
+      Assertions.assertThrows(QueueIsFull.class, () -> queue.enQueue(20));
       queue.deQueue();
       queue.deQueue();
+    }
+    /**
+     * App class Test.
+     */
+    @Test
+    void appTest() {
+    	App.main(null);	
     }
 }
 

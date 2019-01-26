@@ -19,6 +19,9 @@ public final class App {
         queue.enQueue(10);
         queue.enQueue(10);
         System.out.println(queue.deQueue());
+        queue.enQueue(10);
+        queue.deQueue();
+        queue.deQueue();
         System.out.println(queue.size());
         queue.enQueue(10);
         System.out.println(queue.size());
